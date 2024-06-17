@@ -1,0 +1,30 @@
+.materials-list-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.material-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.material-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.material-type {
+    font-style: italic;
+    color: #666;
+}
+
+.classroom,
+.assignment,
+.deadline,
+.file {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+}

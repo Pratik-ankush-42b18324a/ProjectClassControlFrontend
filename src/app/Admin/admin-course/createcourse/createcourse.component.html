@@ -1,0 +1,27 @@
+<div class="course-create">
+    <h2>Create New Course</h2>
+    <form class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="courseName">Course Name</label>
+            <input type="text" id="courseName" name="courseName" class="form-control" required>
+            <div class="invalid-feedback">
+                Please enter a course name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="courseDescription">Course Description</label>
+            <textarea id="courseDescription" name="courseDescription" class="form-control" rows="4" required></textarea>
+            <div class="invalid-feedback">
+                Please enter a course description.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Create Course</button>
+
+        <!-- Success message using :target -->
+        <div class="success-message" id="success-message">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm3.97 5.97a.757.757 0 0 0-1.06 0L7 9.94 5.09 8.03a.757.757 0 1 0-1.06 1.06l2.5 2.5a.757.757 0 0 0 1.06 0l4.5-4.5z"/>
+          </svg> Course created successfully!
+        </div>
+    </form>
+</div>

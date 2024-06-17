@@ -1,0 +1,14 @@
+<div class="content-container">
+    <app-admin-siderbar></app-admin-siderbar>
+    <div class="button-container">
+        <button (click)="loadTeacherList()" type="button" class="btn btn-success">Teachers List</button>
+    </div>
+    <div *ngIf="isTeacherListVisible">
+        <div class="page-container">
+            <div class="container mt-3 course-list-container">
+                <h2>Teachers List</h2>
+            </div>
+            <app-teacher-list></app-teacher-list>
+        </div>
+    </div>
+</div>

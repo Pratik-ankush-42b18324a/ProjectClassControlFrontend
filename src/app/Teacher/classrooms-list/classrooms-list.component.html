@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <div class="sidebar">
+        <app-teacher-sidebar></app-teacher-sidebar>
+    </div>
+    <div class="row card-container">
+        <div *ngFor="let classroom of classrooms" class="col-md-4 mb-4">
+            <div class="card h-100" [ngClass]="{
+                'stream-card': classroom.classroom_Name === 'Stream',
+                'student-work-card': classroom.classroom_Name === 'Student Classwork',
+                'people-card': classroom.classroom_Name === 'People'
+            }">
+                <a routerLink="/teacher-stream" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ classroom.classroom_Name }}</h5>
+                        <p class="card-text"><strong>Classroom ID:</strong> {{ classroom.classroom_Id }}</p>
+                        <p class="card-text"><strong>Description:</strong> {{ classroom.classroom_Description }}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

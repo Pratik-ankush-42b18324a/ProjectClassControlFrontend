@@ -1,0 +1,10 @@
+<div class="form-container">
+    <h2>Delete Notes</h2>
+    <form (ngSubmit)="deleteNotes()" class="delete-form">
+        <div class="form-group">
+            <label for="materialId">Material ID</label>
+            <input type="number" id="materialId" [(ngModel)]="materialId" name="materialId" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="form-container">
+    <div class="form-wrapper">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="courseId">Course ID:</label>
+                <input id="courseId" [(ngModel)]="courseId" name="courseId" required type="number">
+            </div>
+            <div class="form-group">
+                <label for="teacherId">Teacher ID:</label>
+                <input id="teacherId" [(ngModel)]="teacherId" name="teacherId" required type="number">
+            </div>
+            <div class="form-group">
+                <label for="classroomName">Classroom Name:</label>
+                <input id="classroomName" [(ngModel)]="classroomName" name="classroomName" required type="text">
+            </div>
+            <div class="form-group">
+                <label for="classroomDescription">Classroom Description:</label>
+                <input id="classroomDescription" [(ngModel)]="classroomDescription" name="classroomDescription" required type="text">
+            </div>
+            <button type="submit">Create Classroom</button>
+        </form>
+    </div>
+</div>

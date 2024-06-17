@@ -1,0 +1,139 @@
+/* Form Container Styling */
+
+.course-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Form Wrapper Styling */
+
+.course-create form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Form Group Styling */
+
+.course-create .form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Label Styling */
+
+.course-create label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+
+/* Input and Textarea Styling */
+
+.course-create input[type="text"],
+.course-create textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px;
+    display: inline-block;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.course-create input[type="text"]:focus,
+.course-create textarea:focus {
+    border-color: #5c6bc0;
+    outline: none;
+    box-shadow: 0 0 10px rgba(92, 107, 192, 0.4);
+}
+
+
+/* Invalid Feedback for Form Validation */
+
+.course-create .invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+    display: none;
+}
+
+.course-create .invalid-feedback.active {
+    display: block;
+}
+
+
+/* Button Styling */
+
+.course-create button[type="submit"] {
+    width: 100%;
+    background-color: #5c6bc0;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.course-create button[type="submit"]:hover {
+    background-color: #3949ab;
+    transform: scale(1.02);
+}
+
+
+/* Success Message with :target */
+
+.success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.success-message:target {
+    display: block;
+    animation: slideDown 0.5s ease forwards;
+}
+
+.success-message svg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .course-create form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="form-container">
+    <form>
+        <div class="form-group">
+            <label for="classroomId">Classroom ID:</label>
+            <input type="number" id="classroomId" [(ngModel)]="classroomUpdateRequest.classroomId" name="classroomId">
+        </div>
+        <div class="form-group">
+            <label for="teacherId">Teacher ID:</label>
+            <input type="number" id="teacherId" [(ngModel)]="classroomUpdateRequest.teacherId" name="teacherId">
+        </div>
+        <div class="form-group">
+            <label for="classroomName">Classroom Name:</label>
+            <input type="text" id="classroomName" [(ngModel)]="classroomUpdateRequest.classroomName" name="classroomName">
+        </div>
+        <div class="form-group">
+            <label for="classroomDescription">Classroom Description:</label>
+            <input type="text" id="classroomDescription" [(ngModel)]="classroomUpdateRequest.classroomDescription" name="classroomDescription">
+        </div>
+        <button type="button" (click)="onSubmit()">Submit</button>
+    </form>
+</div>

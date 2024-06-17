@@ -1,0 +1,115 @@
+/* Sidebar Styling (Assumed styling for app-admin-siderbar) */
+
+app-admin-siderbar {
+    width: 250px;
+    float: left;
+    background-color: #2c3e50;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+}
+
+app-admin-siderbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+app-admin-siderbar a:hover {
+    background-color: #34495e;
+    padding-left: 20px;
+    transition: padding-left 0.3s ease;
+}
+
+
+/* Dashboard Container Styling */
+
+.dashboard-container {
+    margin-left: 270px;
+    /* Adjusted to account for sidebar width + padding */
+    padding: 30px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Welcome Message Styling */
+
+.welcome-message {
+    text-align: center;
+    font-size: 36px;
+    color: #3498db;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: slideInFromRight 0.8s ease;
+    margin-bottom: 30px;
+}
+
+
+/* Keyframes for Slide In Animation */
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Overview Section Styling */
+
+.overview-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Overview Section Paragraph Styling */
+
+.overview-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+/* Dashboard Overview Title Styling */
+
+.dashboard-overview {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        margin-left: 0;
+        padding: 15px;
+    }
+    .welcome-message {
+        font-size: 28px;
+    }
+    app-admin-siderbar {
+        width: 100%;
+        height: auto;
+    }
+    app-admin-siderbar a {
+        padding: 10px;
+        text-align: center;
+    }
+}

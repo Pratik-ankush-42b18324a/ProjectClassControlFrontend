@@ -1,0 +1,287 @@
+/* Page Container */
+
+.page-container {
+    background-color: #cbdff4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Teacher List Container */
+
+.teacher-list-container {
+    background-color: #1f5fe8a7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(96, 196, 243, 0.1);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.teacher-list-container h2 {
+    color: #0040ff;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Table Styling */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #04a2f6;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table td {
+    vertical-align: top;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Button Styling */
+
+.btn-margin {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+
+.btn-info {
+    background-color: #007bff;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-info:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(71, 153, 240, 0.5);
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-success:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.btn-warning:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5);
+}
+
+
+/* New Button Colors */
+
+.btn-generate-password {
+    background-color: #17a2b8;
+}
+
+.btn-generate-password:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+}
+
+.btn-generate-password:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 225, 248, 0.5);
+}
+
+.btn-send-credentials {
+    background-color: #c36cf3;
+}
+
+.btn-send-credentials:hover {
+    background-color: #a06aef;
+    transform: translateY(-2px);
+}
+
+.btn-send-credentials:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(171, 62, 239, 0.5);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Modal Styling */
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.add-to-course {
+    background-color: #007bff;
+    /* Change this to a color that contrasts with the background */
+    color: black;
+    /* Ensure the text color is readable */
+    border: none;
+    /* Optional: remove border */
+    padding: 10px 20px;
+    /* Optional: add padding for better appearance */
+    font-size: 16px;
+    /* Optional: adjust font size */
+    cursor: pointer;
+    /* Optional: change cursor to pointer */
+}
+
+.add-to-course:hover {
+    background-color: #0056b3;
+    /* Optional: change color on hover */
+}

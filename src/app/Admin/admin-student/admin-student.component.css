@@ -1,0 +1,92 @@
+/* General Styles */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-left: 500px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    position: relative;
+}
+
+app-admin-siderbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #343a40;
+    padding: 20px;
+    color: #fff;
+}
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-container {
+    margin-top: 100px;
+    /* Ensure there's enough space for the button */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+}
+
+.course-list-container h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Button Styles */
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-students-list {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-students-list:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.isStudentListVisible .page-container {
+    animation: fadeIn 0.5s ease, slideIn 0.5s ease;
+}

@@ -1,0 +1,127 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+/* Container Styles */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    align-items: flex-start;
+    /* Align items to the top */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 200px;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap */
+    width: 100%;
+    max-width: 800px;
+    /* Limit maximum width of button container */
+}
+
+
+/* Button Styles */
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.upload-notes {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+}
+
+.upload-notes:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.delete-notes {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.delete-notes:hover {
+    background: linear-gradient(135deg, #c82333, #dc3545);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.assign-assignment {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: black;
+}
+
+.assign-assignment:hover {
+    background: linear-gradient(135deg, #e0a800, #ffc107);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.extend-deadline {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+.extend-deadline:hover {
+    background: linear-gradient(135deg, #138496, #17a2b8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.materials-list {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.materials-list:hover {
+    background: linear-gradient(135deg, #5a6268, #6c757d);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Animation */
+
+@keyframes button-pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:hover {
+    animation: button-pop 0.3s forwards;
+}

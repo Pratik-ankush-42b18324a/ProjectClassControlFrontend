@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Download Material</h2>
+    <form (ngSubmit)="downloadMaterial()" class="download-form">
+        <div class="form-group">
+            <label for="classroomId">Classroom ID</label>
+            <input type="number" class="form-control" id="classroomId" [(ngModel)]="classroomId" name="classroomId" required>
+        </div>
+        <div class="form-group">
+            <label for="materialId">Material ID</label>
+            <input type="number" class="form-control" id="materialId" [(ngModel)]="materialId" name="materialId" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Download</button>
+    </form>
+</div>

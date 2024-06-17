@@ -1,0 +1,114 @@
+/* Footer Styling */
+
+.app-footer {
+    background-color: #9822e7;
+    border-top: 1px solid #d1d1d1;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Aligns items to the start */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px 15px;
+    min-width: 200px;
+    text-align: left;
+    /* Aligns text to the left for a cleaner layout */
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #a8dadc;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+.footer-section .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-section .social-icons a {
+    margin: 0 10px;
+    color: #a8dadc;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-section p {
+    margin: 0;
+    color: #a8dadc;
+}
+
+.footer-section p a {
+    color: #a8dadc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: #007bff;
+}
+
+.footer-section.brand h2 {
+    color: #f1f1f1;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-section.brand p {
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin: 10px 0;
+        text-align: center;
+        /* Center-align text for smaller screens */
+    }
+}

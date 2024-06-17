@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Grid Example</title>
+</head>
+
+<body>
+
+    <div class="content-container">
+        <app-teacher-sidebar></app-teacher-sidebar>
+        <div class="button-container">
+            <button (click)="uploadNotes()" type="button" class="btn upload-notes">Upload Notes</button>
+            <button (click)="deleteNotes()" type="button" class="btn delete-notes">Delete Notes</button>
+            <button (click)="assignAssignment()" type="button" class="btn assign-assignment">Assign Assignment</button>
+            <button (click)="extendAssignmentDeadline()" type="button" class="btn extend-deadline">Extend Assignment Deadline</button>
+            <button (click)="getMaterialsList()" type="button" class="btn materials-list">Materials List</button>
+        </div>
+        <div class="form-container" *ngIf="showUploadNotesForm">
+            <app-teacher-upload-notes></app-teacher-upload-notes>
+        </div>
+        <router-outlet *ngIf="!showUploadNotesForm"></router-outlet>
+    </div>
+
+</body>
+
+</html>

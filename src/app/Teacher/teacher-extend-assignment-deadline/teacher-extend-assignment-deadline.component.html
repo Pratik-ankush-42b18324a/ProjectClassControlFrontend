@@ -1,0 +1,8 @@
+<div class="extend-deadline-container">
+    <h2>Extend Assignment Deadline</h2>
+    <form (submit)="extendDeadline()">
+        <label for="newDeadline">New Deadline:</label>
+        <input type="datetime-local" id="newDeadline" [(ngModel)]="newDeadline" name="newDeadline" required>
+        <button type="submit">Extend Deadline</button>
+    </form>
+</div>

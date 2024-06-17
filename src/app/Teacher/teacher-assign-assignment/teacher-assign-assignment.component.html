@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Assign Assignment</h2>
+    <form (ngSubmit)="onSubmit()" class="assign-form">
+        <div class="form-group">
+            <label for="classroomId">Classroom ID</label>
+            <input type="number" class="form-control" id="classroomId" [(ngModel)]="classroomId" name="classroomId" required>
+        </div>
+        <div class="form-group">
+            <label for="assignmentTitle">Assignment Title</label>
+            <input type="text" class="form-control" id="assignmentTitle" [(ngModel)]="assignmentTitle" name="assignmentTitle" required>
+        </div>
+        <div class="form-group">
+            <label for="deadline">Deadline</label>
+            <input type="datetime-local" class="form-control" id="deadline" [(ngModel)]="deadline" name="deadline" required>
+        </div>
+        <div class="form-group">
+            <label for="file">File</label>
+            <input type="file" class="form-control file-input" id="file" (change)="onFileSelected($event)">
+        </div>
+        <button type="submit" class="btn btn-primary">Assign</button>
+    </form>
+</div>

@@ -1,0 +1,64 @@
+<div class="page-container">
+    <div class="container mt-3 course-list-container">
+        <h2>Students List</h2>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped teacher-list-table">
+            <thead>
+                <tr>
+                    <th scope="col">Student-Id</th>
+                    <th scope="col">Student-Full-Name</th>
+                    <th scope="col">Student-Email</th>
+                    <th scope="col">Student-Mobile-No</th>
+                    <th scope="col">Student-Birth-Date</th>
+                    <th scope="col">Student-Password</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of students | async">
+                    <td>{{ s.student_Id}}</td>
+                    <td>{{ s.student_FullName }}</td>
+                    <td>{{ s.student_Email }}</td>
+                    <td>{{ s.student_MobileNo }}</td>
+                    <td>{{ s.student_BirthDate }}</td>
+                    <td>{{ s.student_Password}}</td>
+                    <td>
+                        <button (click)="generatePassword(s.student_Id)" class="btn btn-generate-password">
+                            Generate Password
+                        </button>
+                        <button (click)="openAddToCourseForm(s.student_Id)" class="btn btn-add-to-course">
+                            Add to Course
+                        </button>
+                        <button (click)="sendCredentials(s.student_Id)" class="btn btn-send-credentials">
+                            Send Credentials
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add To Course Modal -->
+<div class="modal" *ngIf="showAddToCourseForm">
+    <div class="modal-content">
+        <span class="close" (click)="closeAddToCourseForm()">&times;</span>
+        <h2>Add Student to Course</h2>
+        <form (submit)="submitAddToCourse()">
+            <div class="form-group">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" [value]="selectedStudentId" readonly />
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" [(ngModel)]="selectedCourseId" name="course" required>
+                    <option *ngFor="let course of courses" [value]="course.course_Id">
+                        {{ course.course_Name }}
+                    </option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-add-to-course">Add to Course</button>
+        </form>
+    </div>
+</div>

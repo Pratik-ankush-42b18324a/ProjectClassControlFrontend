@@ -1,0 +1,29 @@
+<!-- classroomlist.component.html -->
+<div class="container">
+    <h2 class="text-center my-4">Classrooms List</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Classroom Id</th>
+                <th scope="col">Classroom Name</th>
+                <th scope="col">Classroom Description</th>
+                <th scope="col">Teacher Id</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cr of classrooms |async">
+                <td>{{ cr.courseId }}</td>
+                <td>{{ cr.classroomId }}</td>
+                <td>{{ cr.classroomName }}</td>
+                <td>{{ cr.classroomDescription }}</td>
+                <td>{{ cr.teacherId }}</td>
+                <td>
+                    <button (click)=" deleteClassroom(cr.classroomId)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateClassroom(cr.classroomId)" class="btn btn-primary">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

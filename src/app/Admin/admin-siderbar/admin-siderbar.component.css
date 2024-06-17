@@ -1,0 +1,149 @@
+/* Sidebar Container */
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #064af7;
+    /* Dark blue-gray */
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    /* Use Arial font */
+    overflow-y: auto;
+    /* Enable vertical scroll if content exceeds sidebar height */
+}
+
+
+/* Sidebar Header */
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    text-align: center;
+    color: #f1f1f1;
+    /* White */
+    font-size: 24px;
+    /* Larger font size */
+    font-weight: bold;
+    /* Bold text */
+    margin-bottom: 20px;
+}
+
+
+/* List Items in Sidebar */
+
+#sidebar ul.components {
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar ul.components li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#sidebar ul.components li a {
+    display: block;
+    color: #dcdde1;
+    /* Light gray */
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    /* Slightly larger font size */
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#sidebar ul.components li a i {
+    margin-right: 10px;
+    /* Spacing between icon and text */
+    font-size: 20px;
+}
+
+
+/* Hover Effect for Links */
+
+#sidebar ul.components li a:hover {
+    background-color: #485460;
+    /* Darker gray */
+    color: #fff;
+    /* White */
+}
+
+
+/* Sidebar Toggle Button */
+
+#sidebarCollapse {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    color: #f1f1f1;
+    /* White */
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#sidebarCollapse:hover {
+    transform: scale(1.1);
+}
+
+
+/* Sidebar Overlay */
+
+#sidebarOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    /* Lower z-index than #sidebar */
+    display: none;
+}
+
+#sidebar.collapsed+#sidebarOverlay {
+    display: block;
+}
+
+
+/* Media Query for Responsive Design */
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+    #sidebarCollapse {
+        right: 0;
+    }
+}
+
+
+/* Additional Media Query for Smaller Screens */
+
+@media (max-width: 576px) {
+    #sidebar {
+        width: 100%;
+        left: -100%;
+        /* Hide the sidebar by default */
+        transition: left 0.3s ease;
+        overflow-x: hidden;
+    }
+    #sidebar.show {
+        left: 0;
+        /* Show the sidebar when toggled */
+    }
+    #sidebarCollapse {
+        right: 10px;
+    }
+}

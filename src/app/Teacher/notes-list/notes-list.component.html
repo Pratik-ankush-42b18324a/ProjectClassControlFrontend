@@ -1,0 +1,13 @@
+<div class="materials-list-container">
+    <h2>Materials List</h2>
+    <ul>
+        <li *ngFor="let material of materials">
+            <span>{{ material.material_Title }}</span><br>
+            <span>Material Type: {{ material.materialType }}</span><br>
+            <span *ngIf="material.classroom">Classroom: {{ material.classroom.classroom_Name }}</span><br>
+            <span *ngIf="material.assignment">Assignment: {{ material.assignment.assignment_Title }}</span><br>
+            <span *ngIf="material.assignment">Deadline: {{ material.assignment.assignment_Deadline | date }}</span><br>
+            <span *ngIf="material.material_File">File: {{ material.material_File }}</span><br>
+        </li>
+    </ul>
+</div>
